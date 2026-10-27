@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Shop | Mini Store</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">nova<span>.</span></a>
+    <p class="tagline">Little things. Big joy.</p>
+    <button id="cart-button" class="cart-button" type="button">
+      🛒 Cart <span id="cart-count" class="cart-count">0</span>
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">THE EVERYDAY COLLECTION</p>
+      <h1>Find your next <span>favourite.</span></h1>
+      <p>Thoughtful essentials, selected just for you.</p>
+    </section>
+
+    <section class="shop-layout">
+      <div class="catalog">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CURATED FOR YOU</p>
+            <h2>Our products</h2>
+          </div>
+          <span id="product-count" class="product-count"></span>
+        </div>
+        <div id="product-grid" class="product-grid"></div>
+      </div>
+
+      <aside class="cart-panel">
+        <div class="cart-heading">
+          <h2>Your cart</h2>
+          <span>🛍️</span>
+        </div>
+
+        <div id="cart-items" class="cart-items">
+          <p class="empty-cart">Your cart is waiting for something lovely.</p>
+        </div>
+
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Items</span>
+            <span id="summary-count">0</span>
+          </div>
+          <div class="summary-row total-row">
+            <span>Total</span>
+            <span id="cart-total">₹0.00</span>
+          </div>
+          <button id="checkout-button" class="checkout-button" type="button" disabled>
+            Preview checkout →
+          </button>
+          <p class="secure-note">Demo checkout · No payment required</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="checkout-modal" class="modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <section class="modal-card" role="dialog" aria-modal="true"
+      aria-labelledby="modal-title">
+      <button id="close-modal" class="close-button" type="button"
+        aria-label="Close checkout preview">×</button>
+
+      <div class="modal-icon">✨</div>
+      <p class="eyebrow">ORDER SUMMARY</p>
+      <h2 id="modal-title">Looking good!</h2>
+      <p class="modal-description">Here's a preview of your order.</p>
+
+      <div id="checkout-items" class="checkout-items"></div>
+
+      <div class="modal-total">
+        <span>Total amount</span>
+        <strong id="checkout-total">₹0.00</strong>
+      </div>
+
+      <p class="demo-note">
+        This is a practice checkout. No payment will be taken.
+      </p>
+      <button id="continue-shopping" class="checkout-button" type="button">
+        Continue shopping
+      </button>
+    </section>
+  </div>
+
+  <footer>
+    <p>nova. — Made for the little joys.</p>
+    <p>Mini shop demo · Built with HTML, CSS & JavaScript</p>
+  </footer>
+</body>
+</html>
